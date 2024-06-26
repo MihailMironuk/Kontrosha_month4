@@ -1,0 +1,15 @@
+{% include "../header.html" %}
+<html>
+<head>
+    <title>Добавить отзыв</title>
+</head>
+<body>
+<h1>Добавить отзыв</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Отправить</button>
+</form>
+</body>
+</html>
+{% include "../footer.html" %}

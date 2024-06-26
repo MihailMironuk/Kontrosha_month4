@@ -1,0 +1,20 @@
+{% include '../header.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Удалить продукт?</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <div class="text-center">
+        <h3>Удалить продукт?</h3>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger mt-3">Да</button>
+            <a href="{% url 'catalog:product-list' %}" class="btn btn-success mt-3 ml-2">Нет</a>
+        </form>
+    </div>
+</div>
+{% include '../footer.html' %}

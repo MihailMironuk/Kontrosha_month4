@@ -1,0 +1,24 @@
+{% include "../header.html" %}
+<html>
+<head>
+    <title>Главная страница</title>
+</head>
+<body>
+<div>
+    <h1>{{ Slogan.text }}</h1>
+</div>
+<div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8URn697QqpY?si=9EJ8Zy7ln8Vw4DOL" frameborder="0"
+            allowfullscreen></iframe>
+</div>
+<div>
+    <h2>Топ 5 популярных товаров за неделю</h2>
+    <ul>
+        {% for product in top_products %}
+        <li>{{ product.name }} - {{ product.price }} руб.</li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
+{% include "../footer.html" %}

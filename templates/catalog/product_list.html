@@ -1,0 +1,42 @@
+{% include "../header.html" %}
+<html>
+<head>
+    <h1 class="h1_class">Каталог товаров</h1>
+</head>
+<body>
+<h4 class="card-title">{{ i.name }}</h4>
+<ul>
+    {% for product in products %}
+    <li>
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <p>Цена: {{ product.price }} руб.</p>
+        <a href="/catalog/{{ i.id }}/" class="btn btn-primary">Подробнее</a>
+        <a href="/catalog/{{ i.id }}/delete/" class="btn btn-danger">Удалить товар</a>
+        <a href="/catalog/{{ i.id }}/update/" class="btn btn-warning">Редактировать</a>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
+{% include "../footer.html" %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
